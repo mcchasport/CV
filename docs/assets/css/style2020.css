@@ -1,0 +1,555 @@
+/* ===================================================
+    STYLE - Marie-Claude CHASPORT style
+===================================================== */
+/* ---------------------------------------------------
+    Sources et inspirations
+    - https://bootstrapious.com/p/bootstrap-sidebar
+    - https://bootstrapmade.com/
+    - https://preview.uideck.com/items/meetme/demos.html
+----------------------------------------------------- */
+
+/* ---------------------------------------------------
+    GENERAL STYLE
+----------------------------------------------------- */
+p{
+    text-align: justify;
+}
+
+a,
+a:hover,
+a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.navbar {
+    padding: 15px 10px;
+    background: #fff;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-btn {
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+}
+
+.about {
+    padding: 10px;
+    font-style: italic;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed #ddd;
+    margin: 40px 0;
+}
+
+#home {
+    width: 100%;
+    height: 100vh;
+    background: url("../img/cover.PNG") top center;
+    background-size: cover;
+}
+
+.sectionCover{
+    width: 100%;
+    height: 200px;
+    margin-bottom: 1em;
+}
+
+section {
+    padding: 10px;
+}
+
+.btn-info-perso{
+    color: #fff;
+    background-color: #212529 !important;
+    border-color: #212529 !important;  
+}
+
+.btn-info-perso:hover{
+    color: #8a8b8b !important;
+}
+
+.btn-info-perso:focus {
+    border-color: #212529 !important;  
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.typedText {
+    color: white;
+}
+
+img.profileImgStyle{
+    max-width: 100%; 
+    height: auto; 
+    border: 8px solid #fff; 
+    box-shadow: 0 0 30px rgba(0,0,0,.2);
+}
+
+.moncv{
+    border: 2px solid #fff; 
+    box-shadow: 0 0 30px rgba(0,0,0,.2);
+    color: white !important;
+    margin: 0 auto;
+}
+
+
+.titleImg {
+    display: inline-block;
+    font-size: 15px;
+    background: #3e414d;
+    color: #fff;
+    line-height: 1;
+    padding: 7px 7px;
+    margin-right: 3px;
+    border-radius: 50%;
+    text-align: center;
+    width: 33px;
+    height: 33px;
+    transition: 0.3s;
+}
+
+.social-links a {
+    display: inline-block;
+    font-size: 15px;
+    background: #3e414d;
+    color: #fff;
+    line-height: 1;
+    padding: 7px 7px;
+    margin-right: 3px;
+    border-radius: 50%;
+    text-align: center;
+    width: 33px;
+    height: 33px;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    background: #3e414d;
+}
+
+h2,h3, h4 {
+    color: #173b6c;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #149ddd;
+    margin-top: 3px;
+    box-sizing: border-box;
+}
+
+box-icon {
+    margin-right: 10px;
+}
+
+.divPad {
+    padding: 10px;
+}
+
+li.myListStyle {
+    background: url('../img/icon/bxs-chevron-right.png') no-repeat left top;
+    background-position: 6px 6px;
+    padding-left: 44px;
+    text-align: justify;
+}
+
+ul.myListStyle {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* ---------------------------------------------------
+    TOP BTN
+----------------------------------------------------- */
+
+#myBtn {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: fixed;
+    display: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    right: 15px;
+    bottom: 15px;
+    padding: 8px 0px;
+    background: #212529;
+    color: #fff;
+    transition: display 0.5s ease-in-out;
+    z-index: 99999;
+}
+
+#myBtn:hover {
+  background-color: #8a8b8b;
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+.profile   {
+    margin: 15px auto;
+    display: block;
+    width: 120px;
+    height: 120px;
+    border: 8px solid #254b80;
+    border-radius: 50%!important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.myName {
+    font-weight: bold;
+    text-align: center;
+    font-size: 25px;
+}
+
+.SubMyName{
+    font-weight: bold;
+    text-align: center;
+    font-size: 18px;
+}
+
+
+.subTitle{
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.8em;
+}
+
+h1.myNameTitle{
+    color: white; 
+}
+
+.wrapper {
+    display: flex;
+    width: 100%;
+}
+
+.titleSidebar {
+    color: white; 
+    font-weight: bold;
+}
+
+#sidebar {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 999;
+    background: #173b6c;
+    color: #fff;
+    overflow-y: auto;
+    transition: all 0.3s;
+}
+
+#sidebar.active {
+    margin-left: -250px;
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: #173b6c;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+    border-bottom: 1px solid #173b6c;
+}
+
+#sidebar ul p {
+    color: #fff;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    display: block;
+}
+
+#sidebar ul li a:hover {
+    color: #212529;
+    background: #fff;
+}
+
+.nav-link.active{
+    color: #fff !important;
+    background: #8a8b8b !important;
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #212529;
+}
+
+/* ---------------------------------------------------
+    Card STYLE
+----------------------------------------------------- */
+
+.card-title {
+    font-size: 2em;
+    color: #173b6c ;
+}
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+
+#content {
+    width: calc(100% - 250px);
+    min-height: 100vh;
+    transition: all 0.3s;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#content.active {
+    width: 100%;
+}
+
+
+/* ---------------------------------------------------
+    Timeline
+----------------------------------------------------- */
+
+.timeline-item {
+	padding: 0.2em 2em;
+	position: relative;
+	color: rgba(black, .7);
+}
+
+.timeline-item-border-all {
+    border-left: 2px solid #212529;
+} 
+
+.timeline-item-border-final {
+    border-left:  2px solid ;
+    border-image: linear-gradient(#212529, #8a8b8b ) 30;
+} 
+
+.timeline-item:after {
+		width: 10px;
+		height: 10px;
+		display: block;
+		top: 1em;
+		position: absolute;
+		left: -6px;
+		border-radius: 10px;
+		content: '';
+		border: 2px solid #3e414d;
+		background: white;
+}
+
+.date{
+    background: #d7dadf;
+    padding: 5px 15px;
+    display: inline-block;
+    width: 300px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+    #content {
+        width: 100%;
+    }
+    #content.active {
+        width: calc(100% - 250px);
+    }
+
+    #sidebarCollapse {
+        display: block  !important;
+        position: fixed;
+        right: 15px;
+        top: 15px;
+        z-index: 99999;
+    } 
+
+    h1.myNameTitle{
+        font-size: 28px;
+    }
+    
+    .typedText{
+        font-size: 18px;
+    }
+
+}
+
+@media (min-width: 769px) {
+  #sidebarCollapse {
+        display: none !important;
+    } 
+    h1.myNameTitle{
+        font-size: 64px;
+    }
+    
+    .typedText{
+        font-size: 26px;
+    }
+}
+
+/* ---------------------------------------------------
+    PROGRESS BAR
+----------------------------------------------------- */
+
+.progress-bar {
+	margin: 20px 0 10px;
+	overflow: hidden;
+}
+
+.progress-title-holder {
+	padding-bottom: 7px;
+	position: relative;
+	margin: 5px 0;
+	font-family: Montserrat, sans-serif;
+	font-size: 2e;
+	line-height: 15px;
+	font-weight: 400;
+	color: #2e2e2e;
+}
+
+.progress-title {
+	z-index: 100;
+	font-weight: bold;
+}
+
+.progress-number-wrapper {
+	width: 100%;
+	z-index: 10;
+}
+
+.progress-number-mark {
+	margin-bottom: 4px;
+	border-radius: 3px;
+	background-color: #00d2ff;
+	padding: 0 8px;
+	position: absolute;
+	bottom: 0;
+	-moz-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+}
+
+.progress-number-wrapper,
+.progress-number-mark {
+	font-family: Open Sans, sans-serif;
+	font-size: 11px;
+	line-height: 24px;
+	height: 24px;
+	letter-spacing: 0px;
+	font-weight: 600;
+	font-style: normal;
+	text-transform: none;
+	color: #ffffff;
+}
+
+.down-arrow {
+	border-left: 3px solid transparent;
+	border-right: 3px solid transparent;
+	border-top: 3px solid #00d2ff;
+	position: absolute;
+	left: 50%;
+	top: 100%;
+	-moz-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+}
+
+.progress-content-outter {
+	height: 12px;
+	background-color: #E1E1E0;
+}
+
+.progress-content {
+	height: 21px;
+	background-color: #00d2ff;
+	width: 0%;
+	/* Initial value */
+}
+
+
+/* ---------------------------------------------------
+ Skills
+----------------------------------------------------- */
+.skills .progress {
+  height: 45px;
+  display: block;
+  background: none;
+}
+
+.skills .progress .skill {
+  padding-top: 6px;
+  margin: 0 0 6px 0;
+  text-transform: uppercase;
+  display: block;
+  font-weight: 600;
+  font-size: 16px;
+  color: #050d18;
+}
+
+.skills .progress .skill .val {
+  float: right;
+  font-style: normal;
+}
+
+.skills .progress-bar-wrap {
+  background: #dce8f8;
+}
+
+.skills .progress-bar {
+  width: 1px;
+  height: 10px;
+  transition: .9s;
+  background-color: #149ddd;
+}
+
+p.skill-style{
+    font-size: 14px; 
+    margin-top: 3px;
+}
