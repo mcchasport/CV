@@ -69,8 +69,8 @@ section {
 
 .btn-info-perso{
     color: #fff;
-    background-color: #212529 !important;
-    border-color: #212529 !important;  
+    background-color: #173b6c !important;
+    border-color: #173b6c !important;  
 }
 
 .btn-info-perso:hover{
@@ -78,7 +78,7 @@ section {
 }
 
 .btn-info-perso:focus {
-    border-color: #212529 !important;  
+    border-color: #173b6c !important;  
     outline: none !important;
     box-shadow: none !important;
 }
