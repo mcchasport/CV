@@ -378,63 +378,9 @@
         </div>
     </div>
 
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('#sidebarCollapse').on('click', function () {
-                $('#sidebar').toggleClass('active');
-            });
-        });
-    </script>
-
-
-    <script type="text/javascript">
-        function closeNav() {
-            $("#sidebar").removeClass("active");
-        };
-    </script>
-
-
-    <script type="text/javascript">
-        //Get the button
-        var mybutton = document.getElementById("myBtn");
-
-        // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function () { scrollFunction() };
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                mybutton.style.display = "block";
-            } else {
-                mybutton.style.display = "none";
-            }
-        }
-
-        // When the user clicks on the button, scroll to the top of the document
-        function topFunction() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        }
-    </script>
-
-    <script>
-        var prevScrollpos = window.pageYOffset;
-        window.onscroll = function () {
-            var currentScrollPos = window.pageYOffset;
-            var largeur = window.innerWidth;
-            if (prevScrollpos > currentScrollPos) {
-                if (largeur < 769) {
-                    document.getElementById("langue").style.top = "10px";
-                }
-                document.getElementById("sidebarCollapse").style.top = "10px";
-            } else {
-                if (largeur < 769) {
-                    document.getElementById("langue").style.top = "-50px";
-                }
-                document.getElementById("sidebarCollapse").style.top = "-50px";
-            }
-            prevScrollpos = currentScrollPos;
-        }
-    </script>
+    <!-- Our JS scripts-->
+    <script src="assets/js/scripts.js"></script>
+    <!-- END Our JS scripts-->
 
 </body>
 

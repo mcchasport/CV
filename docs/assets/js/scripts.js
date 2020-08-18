@@ -1,3 +1,7 @@
+///////////////////////////////////////////////////////////////////////
+// Show / hide sidebar
+///////////////////////////////////////////////////////////////////////
+
 $(document).ready(function () {
     $('#sidebarCollapse').on('click', function () {
         $('#sidebar').toggleClass('active');
@@ -8,28 +12,9 @@ function closeNav() {
     $("#sidebar").removeClass("active");
 };
 
-var typed3 = new Typed(document.getElementsByClassName('#typed'), {
-    strings: ['Data scientist','Chercheur', 'Enseignant', 'Cuisinier' ,'Photographe', 'Basketeur'],
-    typeSpeed: 40,
-    backSpeed: 40,
-    backDelay: 1500,
-    smartBackspace: true, 
-    loop: true
-});
-
-//Get the button
-var mybutton = document.getElementById("myBtn");
-
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function () { scrollFunction() };
-
-function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        mybutton.style.display = "block";
-    } else {
-        mybutton.style.display = "none";
-    }
-}
+///////////////////////////////////////////////////////////////////////
+// Button 'Go to top' 
+///////////////////////////////////////////////////////////////////////
 
 // When the user clicks on the button, scroll to the top of the document
 function topFunction() {
@@ -37,14 +22,35 @@ function topFunction() {
     document.documentElement.scrollTop = 0;
 }
 
-var waypoint = new Waypoint({
-    element: document.getElementById('Competences'),
-    handler: function (direction) {
-        $('.progress .progress-bar').each(function () {
-            $(this).css("width", $(this).attr("aria-valuenow") + '%');
-        });
+///////////////////////////////////////////////////////////////////////
+// Show / hide flag, collapse and 'Go to top' buttons with scroll
+///////////////////////////////////////////////////////////////////////
 
-    },
-    offset: '80%'
-})
+var prevScrollpos = window.pageYOffset;
+var mybutton = document.getElementById("myBtn");
 
+window.onscroll = function () {
+
+    // Show / Hide  flag and collapse buttons
+    var currentScrollPos = window.pageYOffset;
+    var largeur = window.innerWidth;
+    if (prevScrollpos > currentScrollPos) {
+        if (largeur < 769) {
+    document.getElementById("langue").style.top = "10px";
+        }
+        document.getElementById("sidebarCollapse").style.top = "10px";
+    } else {
+        if (largeur < 769) {
+    document.getElementById("langue").style.top = "-50px";
+        }
+        document.getElementById("sidebarCollapse").style.top = "-50px";
+    }
+    prevScrollpos = currentScrollPos;
+
+   // Show / Hide button 'Go to top'
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+}
