@@ -420,11 +420,16 @@
         var prevScrollpos = window.pageYOffset;
             window.onscroll = function () {
                 var currentScrollPos = window.pageYOffset;
+                var largeur = window.innerWidth;
                 if (prevScrollpos > currentScrollPos) {
-                    document.getElementById("langue").style.top = "10px";
+                    if(largeur < 769) {
+                        document.getElementById("langue").style.top = "10px";
+                    }
                     document.getElementById("sidebarCollapse").style.top = "10px";
                 } else {
-                    document.getElementById("langue").style.top = "-50px";
+                    if (largeur < 769) {
+                        document.getElementById("langue").style.top = "-50px";
+                    }
                     document.getElementById("sidebarCollapse").style.top = "-50px";
                 }
                 prevScrollpos = currentScrollPos;
